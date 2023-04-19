@@ -3,10 +3,9 @@ import { Box } from '@mui/material'
 
 const Navbar = () => {
   return (
-    <Box>
+    <Box p='15px 30px' bgcolor='gray' sx={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
       <a href='/'>Home</a>
       <a href='#'>Meals</a>
-
     </Box>
   )
 }
