@@ -1,12 +1,13 @@
 import React from 'react'
-import { Box } from '@mui/material'
+import { Link } from 'react-router-dom'
+import { Stack } from '@mui/material'
 
 const Navbar = () => {
   return (
-    <Box p='15px 30px' bgcolor='gray' sx={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
-      <a href='/'>Home</a>
-      <a href='#'>Meals</a>
-    </Box>
+    <Stack p='15px 30px' direction="row" spacing={2} bgcolor="gray">
+      <Link to="/">Home</Link>
+      <a href='#meals'>Meals</a>
+    </Stack>
   )
 }
 
