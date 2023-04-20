@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box, Button, Stack, TextField, Typography } from '@mui/material'
+import { fetchData, mealOptions } from '../utils/fetchData'
 
 const Search = () => {
+  const [categories, setCategories] = useState([])
+
+  useEffect(() => {
+    const fetchMealCategories = async () => {
+      const mealCategories = await fetchData('https://themealdb.p.rapidapi.com/categories.php', mealOptions)
+      console.log(mealCategories)
+      setCategories(mealCategories)
+    }    
+    fetchMealCategories()
+  }, [])
+
   return (
     <Box>
       <Stack direction='row' spacing={2}>
