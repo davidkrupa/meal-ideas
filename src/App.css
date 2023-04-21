@@ -1,7 +1,11 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 a {
@@ -13,4 +17,9 @@ a {
 .hero-image {
   max-width: 100%;
   height: auto;
+}
+
+.card-image {
+  height: 100px;
+  width: auto;
 }
