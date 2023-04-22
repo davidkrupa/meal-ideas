@@ -15,16 +15,14 @@ const Search = () => {
     fetchMealCategories()
   }, [])
 
-  console.log(categories)
-
   return (
     <Stack spacing={5} p='20px' >
       <HorizontalScrollbar categories={categories} />
       <Stack alignItems='center'>
-        <Typography sx={{ fontSize: { lg: '36px', xs: '28px' } }}  >
+        <Typography mb='30px' sx={{ fontSize: { lg: '36px', xs: '28px' } }}  >
           Search for Ideas!
         </Typography>
-        <Stack direction="row" minWidth='80%' maxWidth='1200px' >
+        <Stack direction="row" minWidth='80%' maxWidth='1200px' mb='80px' >
           <TextField variant="outlined" fullWidth/>
           <Button variant='contained' color='success' sx={{ padding: { lg: '0 60px', xs: 'auto' } }} >Search</Button>
         </Stack>

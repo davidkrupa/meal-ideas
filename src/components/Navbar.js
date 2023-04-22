@@ -4,7 +4,7 @@ import { Stack } from '@mui/material'
 
 const Navbar = () => {
   return (
-    <Stack p='15px 30px' direction="row" spacing={2} bgcolor="gray">
+    <Stack p='15px 30px' direction="row" spacing={2} bgcolor="#1f202e">
       <Link to="/">Home</Link>
       <a href='#meals'>Meals</a>
     </Stack>

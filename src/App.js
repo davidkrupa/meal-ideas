@@ -12,10 +12,12 @@ function App() {
   return (
     <Box>
       <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/meal/:id' element={<Meal />} />
-      </Routes>
+      <Box maxWidth='1920px' mx='auto' >
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/meal/:id' element={<Meal />} />
+        </Routes>
+      </Box>
       <Footer />
     </Box>
   );

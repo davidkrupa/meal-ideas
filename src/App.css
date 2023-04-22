@@ -2,6 +2,7 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  color: #222231;
 }
 
 body {
@@ -22,4 +23,10 @@ a {
 .card-image {
   height: 100px;
   width: auto;
+}
+
+.meal-ideas-image {
+  height: 250px;
+  width: auto;
+  border-radius: 0.5em;
 }

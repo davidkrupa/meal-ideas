@@ -27,16 +27,22 @@ const HorizontalScrollbar = ({ categories }) => {
     }
   };
 
+  const handleClick = () => {
+    console.log("clicked")
+  }
+
   const mealCards = categories.map(item => {
     return (
       <Stack 
         alignItems='center' 
         p='40px 20px' 
-        mx='20px' 
+        m='40px 25px' 
         spacing={3}
-        bgcolor='gray' 
+        maxWidth='500px'
+        boxShadow='0px 5px 20px 0px rgba(66, 68, 90, 1)'
         borderRadius='0.5em'
         key={item.idCategory}
+        onClick={() => handleClick()}
       >
         <img className='card-image' src={item.strCategoryThumb} />
         <Typography fontSize='24px' >
