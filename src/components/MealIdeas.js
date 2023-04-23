@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from 'react'
-import { Stack, Typography, Box, Pagination } from '@mui/material'
+import { Stack, Typography, Box, Pagination, Button } from '@mui/material'
 
 import { mealOptions } from '../utils/fetchData'
 import { fetchData } from '../utils/fetchData'
 
-const MealIdeas = () => {
-  const [meals, setMeals] = useState([])
-  const [currentPage, setCurrentPage] = useState(1)
-  const [numberOfPages, setNumberOfPages] = useState(1)
-  const mealsPerPage = 6
+const MealIdeas = ({ meals, setMeals, currentPage, setCurrentPage, numberOfPages, setNumberOfPages, mealsPerPage }) => {
 
+  const firstCard = mealsPerPage * (currentPage - 1)
+  const lastCard = mealsPerPage * currentPage
+  const currentPageData = meals.slice(firstCard, lastCard)
+  
   useEffect(() => {
     const fetchMealIdeas = async () => {
-      const firstCard = mealsPerPage * (currentPage - 1)
-      const lastCard = mealsPerPage * currentPage
       const res = await fetchData('https://themealdb.p.rapidapi.com/randomselection.php', mealOptions)
-      const currentPageData = res.meals.slice(firstCard, lastCard)
-      setNumberOfPages(Math.ceil(res.meals.length/mealsPerPage))
-      setMeals(currentPageData)
+      setMeals(() => res.meals) 
+      setNumberOfPages(Math.ceil(meals.length/mealsPerPage))
     }
     fetchMealIdeas()
   }, [currentPage])
@@ -27,7 +24,7 @@ const MealIdeas = () => {
     window.scrollTo({ top: '1100', behavior: 'smooth' })
   }
 
-  const mealIdeasCards = meals.map(item => {
+  const mealIdeasCards = currentPageData.map(item => {
     return (
       <Box m='10px' sx={{ width: { lg: '400px', sm:'350px', xs: '80%' } }} >
         <Stack
