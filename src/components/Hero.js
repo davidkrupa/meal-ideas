@@ -6,7 +6,7 @@ import heroImage from '../assets/images/hero-image.jpg'
 const Hero = () => {
   return (
     <Box sx={{ position: 'relative' }} mb= "30px">
-      <img src={heroImage} className='hero-image' />
+      <img src={heroImage} className='hero-image' alt='background' />
       <Box 
         sx={{ 
           position: {lg: "absolute", xs: "unset"}, 

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { Stack, Typography, Box, Pagination } from '@mui/material'
 
 import { mealOptions } from '../utils/fetchData'
@@ -26,20 +27,22 @@ const MealIdeas = ({ meals, setMeals, currentPage, setCurrentPage }) => {
   const mealIdeasCards = currentPageData.map(item => {
     return (
       <Box key={item.idMeal} m='10px' sx={{ width: { lg: '400px', sm:'350px', xs: '80%' } }} >
-        <Stack
-          alignItems='center' 
-          p='40px 20px' 
-          m='40px 20px' 
-          spacing={3}
-          boxShadow='0px 2px 15px 0px rgba(66, 68, 90, 1)'
-          borderRadius='0.5em'
-          sx={{ cursor:'pointer', '&:hover': { boxShadow: '0px 2px 20px 3px rgba(66, 68, 90, 1)' } }}
-        >
-          <img className='meal-ideas-image' src={item.strMealThumb} alt='meal' />
-          <Typography fontSize='18px' >
-            {item.strMeal}
-          </Typography>
-        </Stack>
+        <Link to={`meal/${item.idMeal}`} >
+          <Stack
+            alignItems='center' 
+            p='40px 20px' 
+            m='40px 20px' 
+            spacing={3}
+            boxShadow='0px 2px 15px 0px rgba(66, 68, 90, 1)'
+            borderRadius='0.5em'
+            sx={{ cursor:'pointer', '&:hover': { boxShadow: '0px 2px 20px 3px rgba(66, 68, 90, 1)' } }}
+          >
+            <img className='meal-ideas-image' src={item.strMealThumb} alt='meal' />
+            <Typography fontSize='18px' >
+              {item.strMeal}
+            </Typography>
+          </Stack>
+        </Link>
       </Box>
     )
   })
