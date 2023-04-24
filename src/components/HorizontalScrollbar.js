@@ -37,10 +37,11 @@ const HorizontalScrollbar = ({ categories, handleClick }) => {
         maxWidth='500px'
         boxShadow='0px 5px 20px 0px rgba(66, 68, 90, 1)'
         borderRadius='0.5em'
+        sx={{ cursor: 'pointer', '&:hover': { boxShadow: '0px 5px 25px 5px rgba(66, 68, 90, 1)' } }}
         key={item.idCategory}
         onClick={() => handleClick(item.strCategory)}
       >
-        <img className='card-image' src={item.strCategoryThumb} />
+        <img className='card-image' src={item.strCategoryThumb} alt='category' />
         <Typography fontSize='24px' >
           {item.strCategory}
         </Typography>

@@ -26,7 +26,7 @@ const Hero = () => {
         >
           Find delicious meal for today!
         </Typography>
-        <Button variant='contained' color='success' size='large'>Check Meals</Button>
+        <Button variant='contained' color='success' size='large' href='#meals'>Check Meals</Button>
       </Box>
     </Box>
   )
