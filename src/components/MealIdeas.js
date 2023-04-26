@@ -27,7 +27,7 @@ const MealIdeas = ({ meals, setMeals, currentPage, setCurrentPage }) => {
   const mealIdeasCards = currentPageData.map(item => {
     console.log(item)
     return (
-      <Box key={item.idMeal} m='10px' sx={{ width: { lg: '400px', sm:'350px', xs: '80%' } }} >
+      <Box key={item.idMeal} m='10px' sx={{ width: { md: '400px', sm: '80%', xs: '90%' } }} >
         <Link to={`meal/${item.idMeal}`} >
           <Stack
             alignItems='center' 
@@ -39,7 +39,7 @@ const MealIdeas = ({ meals, setMeals, currentPage, setCurrentPage }) => {
             sx={{ cursor:'pointer', '&:hover': { boxShadow: '0px 2px 20px 3px rgba(66, 68, 90, 1)' } }}
           >
             <img className='meal-ideas-image' src={item.strMealThumb} alt='meal' />
-            <Typography fontSize='18px' >
+            <Typography color='#222231' variant='h4' >
               {item.strMeal}
             </Typography>
           </Stack>
@@ -50,6 +50,9 @@ const MealIdeas = ({ meals, setMeals, currentPage, setCurrentPage }) => {
 
   return (
     <Stack alignItems='center' id='meals' >
+      <Typography textAlign='center' variant='h3' >
+        Meals for you!
+      </Typography>
       <Stack direction='row' flexWrap='wrap' justifyContent='center' >
         {mealIdeasCards}
       </Stack>

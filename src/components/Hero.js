@@ -5,7 +5,7 @@ import heroImage from '../assets/images/hero-image.jpg'
 
 const Hero = () => {
   return (
-    <Box sx={{ position: 'relative' }} mb= "30px">
+    <Box sx={{ position: 'relative', mb: '70px' }} >
       <img src={heroImage} className='hero-image' alt='background' />
       <Box 
         sx={{ 
@@ -19,14 +19,15 @@ const Hero = () => {
           }}
         >
         <Typography 
+          variant='h2'
           fontWeight='600' 
           mb='20px' 
           mx='20px' 
-          sx={{ mt:{ lg: 'auto', xs: '25px' }, fontSize:{ lg: '44px', xs: '32px' }}}
+          sx={{ mt:{ lg: 'auto', xs: '50px' }}}
         >
           Find delicious meal for today!
         </Typography>
-        <Button variant='contained' color='success' size='large' href='#meals'>Check Meals</Button>
+        <Button variant='contained' color='success' size='large' sx={{ mt: { lg: 'auto', xs: '30px' } }} href='#meals'>Check Meals</Button>
       </Box>
     </Box>
   )

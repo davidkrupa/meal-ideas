@@ -1,8 +1,13 @@
+import { Stack, Typography } from '@mui/material'
 import React from 'react'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <Stack bgcolor="#1f202e" py='15px' mt='80px' alignItems='center' >
+      <Typography color='white' >
+        Tasty Meal 2023
+      </Typography>
+    </Stack>
   )
 }
 

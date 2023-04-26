@@ -26,15 +26,15 @@ const Search = ({ setMeals, setCurrentPage }) => {
   }
 
   return (
-    <Stack spacing={5} p='20px' >
+    <Stack spacing={12} p='20px' mt='80px' mb='120px' >
       <HorizontalScrollbar categories={categories} handleClick={handleCarouselClick} />
-      <Stack alignItems='center'>
-        <Typography mb='30px' sx={{ fontSize: { lg: '36px', xs: '28px' } }}  >
+      <Stack alignItems='center' >
+        <Typography variant='h3' >
           Search for Ideas!
         </Typography>
-        <Stack direction="row" minWidth='80%' maxWidth='1200px' mb='80px' >
+        <Stack direction="row" minWidth='80%' maxWidth='1200px' mt='30px' >
           <TextField variant="outlined" fullWidth/>
-          <Button variant='contained' color='success' sx={{ padding: { lg: '0 60px', xs: 'auto' } }} >
+          <Button variant='contained' color='success' sx={{ padding: { md: '0 60px', xs: 'auto' }}} >
             Search
           </Button>
         </Stack>

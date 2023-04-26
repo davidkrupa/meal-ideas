@@ -27,8 +27,8 @@ a {
 }
 
 .meal-ideas-image {
-  height: 250px;
-  width: auto;
+  height: auto;
+  width: 90%;
   border-radius: 0.5em;
 }
 
