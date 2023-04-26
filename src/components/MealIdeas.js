@@ -25,6 +25,7 @@ const MealIdeas = ({ meals, setMeals, currentPage, setCurrentPage }) => {
   }
 
   const mealIdeasCards = currentPageData.map(item => {
+    console.log(item)
     return (
       <Box key={item.idMeal} m='10px' sx={{ width: { lg: '400px', sm:'350px', xs: '80%' } }} >
         <Link to={`meal/${item.idMeal}`} >
