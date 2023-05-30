@@ -2,11 +2,10 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #222231;
 }
 
@@ -36,4 +35,12 @@ a {
   height: auto;
   width: 100%;
   border-radius: 0.5em;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 }
